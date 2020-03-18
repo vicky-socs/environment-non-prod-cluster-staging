@@ -1,0 +1,40 @@
+
+Showing logs for build [32mvicky-socs-environment-non-prod-wlh54-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-9ddjd[0m
+{"level":"warn","ts":1584538639.0706341,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584538639.0714014,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-wlh54-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xrgq5[0m
+{"level":"warn","ts":1584538640.6316054,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584538640.638797,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-wlh54-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-environment-non-prod-wlh54-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-environment-non-prod-wlh54-zn57t[0m
+{"level":"warn","ts":1584538645.936714,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584538647.9418247,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/environment-non-prod-cluster-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-wlh54-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:91498eb7fe2a01bd6a12841217e9b4135ebbd423,11:b3adab7ea7040412951ca1a26fc9e00175f6740c
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow b3adab7ea7040412951ca1a26fc9e00175f6740c: 91498eb7fe2a01bd6a12841217e9b4135ebbd423:
+DEBUG: ran git fetch --unshallow origin b3adab7ea7040412951ca1a26fc9e00175f6740c: 91498eb7fe2a01bd6a12841217e9b4135ebbd423: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 91498eb7fe2a01bd6a12841217e9b4135ebbd423
+DEBUG: ran git reset --hard 91498eb7fe2a01bd6a12841217e9b4135ebbd423 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge b3adab7ea7040412951ca1a26fc9e00175f6740c
+DEBUG: ran git merge b3adab7ea7040412951ca1a26fc9e00175f6740c in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 91498eb7fe2a01bd6a12841217e9b4135ebbd423..HEAD
+Merged SHA b3adab7ea7040412951ca1a26fc9e00175f6740c with commit message 'chore: Promote test-python-jenkinsx to version 0.0.11' into base branch master
+
+Showing logs for build [32mvicky-socs-environment-non-prod-wlh54-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
