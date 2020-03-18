@@ -1,0 +1,40 @@
+
+Showing logs for build [32mvicky-socs-environment-non-prod-xpxnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-t59xw[0m
+{"level":"warn","ts":1584534748.308708,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584534748.311315,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-xpxnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-nvw4p[0m
+{"level":"warn","ts":1584534749.1748755,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584534749.179467,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-xpxnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-environment-non-prod-xpxnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-environment-non-prod-xpxnc-pzv9b[0m
+{"level":"warn","ts":1584534753.6129637,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584534755.8854766,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/environment-non-prod-cluster-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-xpxnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9d5d2098bdfa5c29412c42fd5974c60d3f1ccc29,5:af0465e10284502a1b4bd0b2c3e81dc148244ecf
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow af0465e10284502a1b4bd0b2c3e81dc148244ecf: 9d5d2098bdfa5c29412c42fd5974c60d3f1ccc29:
+DEBUG: ran git fetch --unshallow origin af0465e10284502a1b4bd0b2c3e81dc148244ecf: 9d5d2098bdfa5c29412c42fd5974c60d3f1ccc29: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 9d5d2098bdfa5c29412c42fd5974c60d3f1ccc29
+DEBUG: ran git reset --hard 9d5d2098bdfa5c29412c42fd5974c60d3f1ccc29 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge af0465e10284502a1b4bd0b2c3e81dc148244ecf
+DEBUG: ran git merge af0465e10284502a1b4bd0b2c3e81dc148244ecf in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 9d5d2098bdfa5c29412c42fd5974c60d3f1ccc29..HEAD
+Merged SHA af0465e10284502a1b4bd0b2c3e81dc148244ecf with commit message 'chore: Promote test-python-jenkinsx to version 0.0.4' into base branch master
+
+Showing logs for build [32mvicky-socs-environment-non-prod-xpxnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
