@@ -1,0 +1,40 @@
+
+Showing logs for build [32mvicky-socs-environment-non-prod-cvkbq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-r65lq[0m
+{"level":"warn","ts":1584611763.9803746,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584611763.9822423,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-cvkbq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-lqd28[0m
+{"level":"warn","ts":1584611764.9563093,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584611764.9606004,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-cvkbq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvicky-socs-environment-non-prod-cvkbq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vicky-socs-environment-non-prod-cvkbq-g7vk5[0m
+{"level":"warn","ts":1584611792.0349417,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584611794.0901601,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/vicky-socs/environment-non-prod-cluster-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mvicky-socs-environment-non-prod-cvkbq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a5de48100708d702293bf1f55b8b1fba2a229503,14:270eb3a7ccbb6faa2dc74ef78e0c956d05a9f6a2
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 270eb3a7ccbb6faa2dc74ef78e0c956d05a9f6a2: a5de48100708d702293bf1f55b8b1fba2a229503:
+DEBUG: ran git fetch --unshallow origin 270eb3a7ccbb6faa2dc74ef78e0c956d05a9f6a2: a5de48100708d702293bf1f55b8b1fba2a229503: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard a5de48100708d702293bf1f55b8b1fba2a229503
+DEBUG: ran git reset --hard a5de48100708d702293bf1f55b8b1fba2a229503 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 270eb3a7ccbb6faa2dc74ef78e0c956d05a9f6a2
+DEBUG: ran git merge 270eb3a7ccbb6faa2dc74ef78e0c956d05a9f6a2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e a5de48100708d702293bf1f55b8b1fba2a229503..HEAD
+Merged SHA 270eb3a7ccbb6faa2dc74ef78e0c956d05a9f6a2 with commit message 'chore: Promote test-python-jenkinsx to version 0.0.14' into base branch master
+
+Showing logs for build [32mvicky-socs-environment-non-prod-cvkbq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
